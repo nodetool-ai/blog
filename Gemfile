@@ -5,3 +5,4 @@ gem "webrick"
 gem "puma"
 gem "puma"
 gem "thin"
+gem 'nokogiri'
