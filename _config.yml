@@ -1,0 +1,72 @@
+# Site settings
+title: NodeTool AI Blog
+description: >-
+  Insights and updates from the NodeTool AI team.
+  Building the future of AI workflows.
+baseurl: "/blog" # the subpath of your site, e.g. /blog
+url: "https://nodetool-ai.github.io" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
+
+# Plugin settings
+relative_links:
+  enabled: true
+  collections: false
+
+optional_front_matter:
+  remove_originals: false
+
+readme_index:
+  enabled: true
+  remove_originals: false
+
+titles_from_headings:
+  enabled: true
+  strip_title: false
+  collections: false
+
+# Navigation
+header_pages:
+  - index.md
+  - about.md
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Rakefile
+  - config.ru
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - templates/
+
+# Kramdown settings
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+# Collections for blog posts
+collections:
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:title/
