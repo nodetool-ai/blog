@@ -1,8 +1,6 @@
-gem "shinmun"
+gem "shinmun", github: "georgi/shinmun"
 gem "rackup"
 gem "rack-session"
 gem "webrick"
 gem "puma"
-gem "puma"
 gem "thin"
-gem 'nokogiri'
