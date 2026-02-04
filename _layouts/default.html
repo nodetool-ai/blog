@@ -56,10 +56,6 @@
   {% include header.html %}
 
   <div class="main-container">
-    {% if page.layout == 'page' or page.url != '/' %}
-      {% include sidebar.html %}
-    {% endif %}
-
     <main class="content">
       {{ content }}
     </main>
