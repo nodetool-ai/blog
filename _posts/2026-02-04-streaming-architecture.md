@@ -6,8 +6,6 @@ categories: [technical, architecture]
 tags: [nodetool, streaming, architecture, ai, workflows, real-time]
 ---
 
-# NodeTool's Streaming Architecture for Real-Time AI Workflows
-
 NodeTool's execution engine uses an **actor-based streaming architecture** that enables real-time AI workflows without blocking. This document explains how it works and why it matters for building responsive AI applications.
 
 ## The Problem with Traditional DAG Execution
