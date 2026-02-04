@@ -3,12 +3,12 @@ title: NodeTool AI Blog
 description: >-
   Insights and updates from the NodeTool AI team.
   Building the future of AI workflows.
-baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "https://nodetool-ai.github.io" # the base hostname & protocol for your site
+baseurl: "/"
+url: "https://blog.nodetool.ai" # the base hostname & protocol for your site
 
 # Optional: Plausible Analytics
 # Uncomment and set to enable privacy-friendly analytics
-# plausible_analytics_id: "pa--YourAnalyticsID"
+plausible_analytics_id: "pa-_Hpv1mQe8EWPrIdZh9A6-"
 
 # Build settings
 markdown: kramdown
