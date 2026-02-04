@@ -1,0 +1,32 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+      - run: bundle install
+      - run: |
+          bundle exec thin start -p 9292 &
+          sleep 5
+          which wget || apt-get update && apt-get install -y wget
+          mkdir -p _site
+          wget --mirror --convert-links --adjust-extension -P _site http://localhost:9292/ 2>/dev/null
+          pkill -f thin || true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: '_site'
+      - uses: actions/deploy-pages@v4
