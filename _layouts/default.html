@@ -25,11 +25,11 @@
         pre.parentElement.replaceChild(mermaidDiv, pre);
       });
       
-      // Initialize mermaid
+      // Initialize mermaid with secure settings
       mermaid.initialize({ 
         startOnLoad: true,
         theme: 'dark',
-        securityLevel: 'loose',
+        securityLevel: 'strict',
         flowchart: {
           useMaxWidth: true,
           htmlLabels: true
